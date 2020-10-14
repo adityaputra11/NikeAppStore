@@ -1,0 +1,6 @@
+module Pods_NikeAppStore_NikeAppStoreTests {
+  umbrella header "Pods-NikeAppStore-NikeAppStoreTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
