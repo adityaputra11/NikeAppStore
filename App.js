@@ -16,6 +16,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import ToastCustom from './ToastCustom';
+
 import {
   Header,
   LearnMoreLinks,
@@ -27,6 +29,7 @@ import {
 const App: () => React$Node = () => {
   return (
     <>
+      {ToastCustom.show('Awesome', ToastCustom.SHORT)}
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView

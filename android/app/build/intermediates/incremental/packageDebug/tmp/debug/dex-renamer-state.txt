@@ -1,4 +1,4 @@
-#Thu Oct 15 05:29:20 WIB 2020
+#Thu Oct 15 06:20:20 WIB 2020
 base.0=/Users/myindofrontend/Documents/Portofolio/NikeAppStore/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
