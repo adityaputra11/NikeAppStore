@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import {View} from 'react-native';
 import styles from './styles';
-import {StatusBar} from 'react-native';
+import {Text} from 'react-native';
 
 const HomeScreen = () => {
   useEffect(() => {}, []);
 
   return (
     <View style={styles.container}>
-      <StatusBar translucent backgroundColor={'transparent'} />
+      <Text>Hello World</Text>
     </View>
   );
 };

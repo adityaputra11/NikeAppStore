@@ -1,14 +1,14 @@
 import React, {useState, useEffect, createRef} from 'react';
 import {View, FlatList, Image, Dimensions} from 'react-native';
 import styles from './styles';
-import {link} from '@data';
+import {carouselImages} from '@data';
 
 let CurrentSlide = 0;
 const Carousel = () => {
-  const [images, setImages] = useState(link);
+  const [images, setImages] = useState(carouselImages);
 
   useEffect(() => {
-    setImages(link);
+    setImages(carouselImages);
     const interval = setInterval(() => {
       goToNextPage();
     }, 4000);

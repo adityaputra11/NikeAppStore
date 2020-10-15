@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import Root from '@stack/Root';
+import Root from '@screen/Root';
 
 const App = () => {
   return (
