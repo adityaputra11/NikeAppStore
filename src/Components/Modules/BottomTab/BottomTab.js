@@ -1,8 +1,7 @@
 import React from 'react';
 import {BottomMenu} from '@data';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text} from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Text, Image} from 'react-native';
 import {responsiveFont, colorTheme} from '@util';
 
 const Tab = createBottomTabNavigator();
@@ -12,11 +11,10 @@ const BottomTab = () => {
     <Tab.Navigator
       tabBarOptions={{
         style: {
-          borderTopRightRadius: 20,
-          borderTopLeftRadius: 20,
-          borderWidth: 1,
-          borderColor: '#ccc',
           padding: 10,
+          backgroundColor: '#F2F2F2',
+          elevation: 0,
+          borderWidth: 0,
         },
       }}>
       {BottomMenu.map((item) => (
@@ -32,16 +30,14 @@ const BottomTab = () => {
                   color: focused ? colorTheme.primaryColor : 'gray',
                   fontSize: responsiveFont(9),
                   marginBottom: 5,
-                  marginTop: 10,
-                }}>
-                {item.label}
-              </Text>
+                }}
+              />
             ),
             tabBarIcon: ({color, size, focused}) => (
-              <MaterialCommunityIcons
-                name={item.icon}
-                color={focused ? colorTheme.primaryColor : 'gray'}
-                size={size}
+              <Image
+                source={focused ? item.activeIcon : item.inActiveIcon}
+                style={{width: 25, height: 25}}
+                resizeMode="contain"
               />
             ),
           }}

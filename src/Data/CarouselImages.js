@@ -1,8 +1,14 @@
 export const CarouselImages = [
-  'https://picsum.photos/500?random=1',
-  'https://picsum.photos/500?random=2',
-  'https://picsum.photos/500?random=3',
-  'https://picsum.photos/500?random=4',
-  'https://picsum.photos/500?random=5',
-  'https://picsum.photos/500?random=6',
+  {
+    image: require('@images/nikeBanner1.jpg'),
+    desc: 'Nike',
+  },
+  {
+    image: require('@images/nikeBanner2.jpg'),
+    desc: 'Nike',
+  },
+  {
+    image: require('@images/nikeBanner3.jpg'),
+    desc: 'Nike',
+  },
 ];
