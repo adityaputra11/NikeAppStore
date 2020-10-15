@@ -1,8 +1,13 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  coloredContainer: {
+    flex: 1,
+    backgroundColor: '#F2F2F2',
+    borderTopRightRadius: Dimensions.get('window').height * 0.3,
   },
   scrollContainer: {
     backgroundColor: '#fff',

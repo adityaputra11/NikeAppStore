@@ -4,19 +4,21 @@ export const BottomMenu = [
   {
     name: 'Home',
     label: 'home',
-    icon: 'signature-image',
+    icon: 'home',
+    activeIcon: '',
+    disableIcon: '',
     component: HomeScreen,
   },
   {
     name: 'Favorite',
     label: 'favorite',
-    icon: 'store',
+    icon: 'favorite-border',
     component: HomeScreen,
   },
   {
     name: 'Account',
     label: 'account',
-    icon: 'store',
+    icon: 'account',
     component: HomeScreen,
   },
 ];
