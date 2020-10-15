@@ -11,12 +11,12 @@ export const BottomMenu = [
     name: 'Favorite',
     label: 'favorite',
     icon: 'store',
-    component: OfficialStoreScreen,
+    component: HomeScreen,
   },
   {
     name: 'Account',
     label: 'account',
     icon: 'store',
-    component: OfficialStoreScreen,
+    component: HomeScreen,
   },
 ];
