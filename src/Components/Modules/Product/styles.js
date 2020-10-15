@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   font: {
-    fontSize: responsiveFont(9.5),
+    fontSize: responsiveFont(9),
+    color: '#ffffff',
   },
   fontGray: {
     fontSize: responsiveFont(9.5),
@@ -45,17 +46,28 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   sliderItems: {
+    width: null,
     height: Dimensions.get('window').height * 0.25,
-    borderRadius: 6,
-    resizeMode: 'cover',
+    resizeMode: 'contain',
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
   item: {
     margin: 5,
-    width: WIDTH * 0.33,
-    elevation: 5,
+    borderColor: '#ccc',
+    width: WIDTH * 0.32,
+    borderRadius: 6,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 3,
   },
   itemPrice: {
-    padding: 10,
+    padding: 6,
+    backgroundColor: '#747474',
+    borderBottomRightRadius: 6,
+    borderBottomLeftRadius: 6,
   },
   row: {
     flexDirection: 'row',
@@ -65,7 +77,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     flex: 1,
-    justifyContent: 'space-between',
+    padding: 2,
   },
   percent: {
     padding: 5,
@@ -73,6 +85,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginRight: 5,
   },
+  icon: {width: 15, height: 15, marginRight: 5},
 });
 
 export default styles;

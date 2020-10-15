@@ -10,6 +10,7 @@ module.exports = {
           '@data': './src/Data',
           '@util': './src/Util',
           '@images': './src/Assets/images',
+          '@lib': './src/lib',
         },
       },
     ],

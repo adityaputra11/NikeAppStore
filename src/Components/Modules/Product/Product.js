@@ -2,8 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, FlatList, Image, Dimensions} from 'react-native';
 import styles from './styles';
 import {Promo} from '@data';
+import {Card} from 'react-native-shadow-cards';
 import Ripple from 'react-native-material-ripple';
 import {useNavigation} from '@react-navigation/native';
+import ToastCustom from '../../../lib/ToastCustom';
 
 const Product = (props) => {
   const navigation = useNavigation();
@@ -19,15 +21,28 @@ const Product = (props) => {
   };
   const renderItem = ({item}) => {
     return (
-      <Ripple onPress={() => onPressDetail(item)}>
-        <View style={styles.item}>
+      <View>
+        <Card style={styles.item}>
           <Image
-            source={{uri: item.image}}
+            source={item.image}
             // resizeMode={'contain'}
             style={styles.sliderItems}
           />
-        </View>
-      </Ripple>
+          <View style={styles.itemPrice}>
+            <Ripple
+              rippleOpacity={0}
+              onPress={() => {
+                ToastCustom.show(`added ${item.label}`, ToastCustom.SHORT);
+                props.onPress();
+              }}
+              style={styles.rowTitle}>
+              <Image source={require('@images/plus.png')} style={styles.icon} />
+
+              <Text style={styles.font}>{item.label}</Text>
+            </Ripple>
+          </View>
+        </Card>
+      </View>
     );
   };
   const keyExtractor = (item, index) => {
@@ -36,7 +51,9 @@ const Product = (props) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.rowTitle} />
+      <View style={styles.rowTitle}>
+        <Text style={styles.title}>{props.title}</Text>
+      </View>
       <FlatList
         keyExtractor={keyExtractor}
         horizontal

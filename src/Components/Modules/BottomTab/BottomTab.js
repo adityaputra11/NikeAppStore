@@ -1,8 +1,7 @@
 import React from 'react';
 import {BottomMenu} from '@data';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {Text, Image} from 'react-native';
 import {responsiveFont, colorTheme} from '@util';
 
 const Tab = createBottomTabNavigator();
@@ -35,10 +34,10 @@ const BottomTab = () => {
               />
             ),
             tabBarIcon: ({color, size, focused}) => (
-              <MaterialIcons
-                name={item.icon}
-                color={focused ? colorTheme.primaryColor : 'gray'}
-                size={size}
+              <Image
+                source={focused ? item.activeIcon : item.inActiveIcon}
+                style={{width: 25, height: 25}}
+                resizeMode="contain"
               />
             ),
           }}

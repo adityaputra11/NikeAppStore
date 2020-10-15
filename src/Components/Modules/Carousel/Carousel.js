@@ -149,15 +149,17 @@ export default class Carousel extends Component {
   };
 
   changeSliderListIndex = () => {
-    if (this.props.animation) {
-      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeIn);
-    }
-    if (this.state.index < this.state.data.length) {
+    try {
+      if (this.props.animation) {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeIn);
+      }
       this.setState({index: this.state.index + 1});
       this.slider.current.scrollToIndex({
         index: this.state.index,
         animated: true,
       });
+    } catch (error) {
+      console.log(error);
     }
   };
 

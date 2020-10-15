@@ -14,7 +14,7 @@ const Preview = ({style, item, imageKey, onPress, index, active, local}) => {
       style={[styles.videoContainer]}
       onPress={() => onPress(item)}>
       <View style={[styles.imageContainer, styles.shadow]}>
-        <Image style={styles.videoPreview} source={{uri: item[imageKey]}} />
+        <Image style={styles.videoPreview} source={item[imageKey]} />
       </View>
     </TouchableOpacity>
   );
