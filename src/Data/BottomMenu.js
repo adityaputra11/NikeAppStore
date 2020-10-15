@@ -1,8 +1,4 @@
-import OfficialStoreScreen from '@screen/OfficialStoreScreen';
 import HomeScreen from '@screen/HomeScreen';
-// import FeedStack from '@stack/FeedStack';
-// import LoginScreen from '@screen/LoginScreen';
-import HeaderRoot from '@screen/HeaderRoot';
 
 export const BottomMenu = [
   {
