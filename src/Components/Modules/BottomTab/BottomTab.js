@@ -9,7 +9,6 @@ const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {
   return (
-    // eslint-disable-next-line react-native/no-inline-styles
     <Tab.Navigator
       tabBarOptions={{
         style: {
@@ -27,7 +26,6 @@ const BottomTab = () => {
           component={item.component}
           options={{
             tabBarLabel: ({color, size, focused}) => (
-              // eslint-disable-next-line react-native/no-inline-styles
               <Text
                 // eslint-disable-next-line react-native/no-inline-styles
                 style={{

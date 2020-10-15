@@ -6,7 +6,6 @@ const DetailScreen = () => {
   return (
     <View style={styles.container}>
       <Text>HelloWorld</Text>
-      <ScrollView style={styles.position} />
     </View>
   );
 };
