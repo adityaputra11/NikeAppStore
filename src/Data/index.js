@@ -1,2 +1,2 @@
 export * from './BottomMenu';
-export * from './carouselImages';
+export * from './CarouselImages';

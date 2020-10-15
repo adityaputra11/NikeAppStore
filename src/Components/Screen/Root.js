@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import BottomTab from '@components/Module/BottomTab';
+import BottomTab from '@components/Modules/BottomTab';
 
 const Stack = createStackNavigator();
 const Root = () => {
